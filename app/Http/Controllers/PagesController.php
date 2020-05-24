@@ -7,15 +7,30 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index() {
-        // return 'INDEX';
-        return view('pages.index');
+        // passing values into a blade template
+        $title = 'Welcome to Laravel!';
+
+        // first way of passing values into a blade template:
+        // return view('pages.index', compact('title'));
+
+        // second way of passing values into a blade template:
+        return view('pages.index')->with('title', $title);
     }
 
     public function about() {
-        return view('pages.about');
+        // passing values into a blade template
+        $title = 'About Us';
+
+        return view('pages.about')->with('title', $title);
     }
 
     public function services() {
-        return view('pages.services');
+        // passing multiple values into a blade template
+        $data = [
+            'title' => 'Services',
+            'services' => ['Web Design', 'Programming', 'SEO']
+        ];
+
+        return view('pages.services')->with($data);
     }
 }
