@@ -32,4 +32,4 @@
 
 ## Code
 
-The complete code for this series can be found [here](https://github.com/bradtraversy/lsapp){target="\_blank"}
+The complete code for this series can be found <a href="https://github.com/bradtraversy/lsapp" target="_blank">here</a>.
